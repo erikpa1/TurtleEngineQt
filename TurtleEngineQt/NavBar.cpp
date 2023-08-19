@@ -1,10 +1,8 @@
 #include "NavBar.h"
 
-
 #include <QtWidgets/QLabel>
 #include <QtWidgets/qboxlayout.h>
 #include <QtWidgets/qpushbutton.h>
-
 
 
 namespace tui {
@@ -13,26 +11,33 @@ namespace tui {
 	{
 		new QLabel("Magic label", this);
 
-		auto layout = new QBoxLayout(QBoxLayout::Direction::LeftToRight, this);
+		_layout = new QBoxLayout(QBoxLayout::Direction::Down, this);
 
-
-		auto btn1 = new QPushButton();
-		btn1->setText("Btn1");
-
-
-		auto btn2 = new QPushButton();
-		btn1->setText("Btn2");
-
-		layout->addWidget(btn1);
-		layout->addWidget(btn2);
-
-
+		_AddNavBarButton("projects", "projects.svg");
+		_AddNavBarButton("deployment", "deploymnet.svg");
+		_AddNavBarButton("assets", "assets.svg");
 
 	}
 
 	NavBar::~NavBar()
 	{
+
 	}
+
+	void NavBar::_AddNavBarButton(std::string lang, std::string icon)
+	{
+		auto btn1 = new QPushButton();
+		btn1->setText("Btn1");
+
+		_layout->addWidget(btn1);
+
+
+	}
+
+
+
+
+
 
 }
 

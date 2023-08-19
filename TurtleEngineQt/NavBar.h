@@ -3,6 +3,10 @@
 #include <QtWidgets/qwidget.h>
 
 
+
+class QBoxLayout;
+
+
 namespace tui {
 
 	class NavBar : public QWidget
@@ -13,6 +17,16 @@ namespace tui {
 		NavBar(QWidget* parent = nullptr);
 		~NavBar();
 
+
+	private:
+
+		bool _isMaximalized = true;
+
+		QBoxLayout _layout;
+
+
+
+		void _AddNavBarButton(std::string lang, std::string icon);
 
 	};
 
