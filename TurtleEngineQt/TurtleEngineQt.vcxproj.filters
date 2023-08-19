@@ -10,6 +10,18 @@
     <Filter Include="Ui\NavBar">
       <UniqueIdentifier>{eec087ab-fda2-4d9f-bbe5-b5fb8f7f119f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ui\Routes">
+      <UniqueIdentifier>{9307f9d8-b53b-43bc-806c-e2b5bddc5bff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\Routes\Projects">
+      <UniqueIdentifier>{a302b5af-47fc-4027-9c0e-c2244c3ed218}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ui\General">
+      <UniqueIdentifier>{5feccb6d-0fc2-46e9-8c76-5ef31cfa6e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Routing">
+      <UniqueIdentifier>{5ad9d2c6-7112-483e-940b-aede35536d61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TurtleMainWindow.cpp">
@@ -18,6 +30,12 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NavBar.cpp">
       <Filter>Ui\NavBar</Filter>
+    </ClCompile>
+    <ClCompile Include="ProjectsView.cpp">
+      <Filter>Ui\Routes\Projects</Filter>
+    </ClCompile>
+    <ClCompile Include="Router.cpp">
+      <Filter>Routing</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -34,8 +52,14 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="TurtleMainWindow.qrc">
-      <Filter>Ui\Main</Filter>
-    </QtRcc>
+    <ClInclude Include="ProjectsView.h">
+      <Filter>Ui\Routes\Projects</Filter>
+    </ClInclude>
+    <ClInclude Include="Router.h">
+      <Filter>Routing</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="TurtleMainWindow.qrc" />
   </ItemGroup>
 </Project>

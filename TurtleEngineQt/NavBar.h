@@ -4,7 +4,8 @@
 
 
 
-class QBoxLayout;
+class QVBoxLayout;
+class QPaintEvent;
 
 
 namespace tui {
@@ -22,13 +23,20 @@ namespace tui {
 
 		bool _isMaximalized = true;
 
-		QBoxLayout _layout;
+		QVBoxLayout* _layout;
 
 
 
 		void _AddNavBarButton(std::string lang, std::string icon);
 
+	protected:
+
+		void paintEvent(QPaintEvent* event) override;
+
 	};
+
+
+
 
 
 }

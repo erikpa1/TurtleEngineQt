@@ -1,4 +1,66 @@
 <RCC>
-    <qresource prefix="TurtleMainWindow">
+    <qresource prefix="/TurtleMainWindow"/>
+    <qresource prefix="/Icons">
+        <file>Icons/Add.svg</file>
+        <file>Icons/Alarm.svg</file>
+        <file>Icons/Alchemy.svg</file>
+        <file>Icons/Arrow.Down.svg</file>
+        <file>Icons/Arrow.Up.svg</file>
+        <file>Icons/Assets.svg</file>
+        <file>Icons/BarChart.svg</file>
+        <file>Icons/Bell.svg</file>
+        <file>Icons/Calendar.svg</file>
+        <file>Icons/Cancel.svg</file>
+        <file>Icons/Checkbox.Empty.svg</file>
+        <file>Icons/Checkbox.Failed.svg</file>
+        <file>Icons/Checkbox.Ok.svg</file>
+        <file>Icons/Cloud.svg</file>
+        <file>Icons/Compas.svg</file>
+        <file>Icons/Connections.svg</file>
+        <file>Icons/Create.Form.svg</file>
+        <file>Icons/Create.Image.svg</file>
+        <file>Icons/Create.Mesh.svg</file>
+        <file>Icons/Create.Other.svg</file>
+        <file>Icons/Create.Pdf.svg</file>
+        <file>Icons/Create.Quiz.svg</file>
+        <file>Icons/Create.Sound.svg</file>
+        <file>Icons/Create.Table.svg</file>
+        <file>Icons/Create.Video.svg</file>
+        <file>Icons/Delete.svg</file>
+        <file>Icons/Deployment.svg</file>
+        <file>Icons/Designer.svg</file>
+        <file>Icons/Exam.svg</file>
+        <file>Icons/Gizmo.Rotate.svg</file>
+        <file>Icons/Gizmo.Scale.svg</file>
+        <file>Icons/Gizmo.Translate.svg</file>
+        <file>Icons/Hierarchy.svg</file>
+        <file>Icons/Layers.svg</file>
+        <file>Icons/Load.svg</file>
+        <file>Icons/Magnifier.White.svg</file>
+        <file>Icons/Management.svg</file>
+        <file>Icons/Map.svg</file>
+        <file>Icons/Ok.svg</file>
+        <file>Icons/Pause.svg</file>
+        <file>Icons/Phone.svg</file>
+        <file>Icons/Physics.Avatar.svg</file>
+        <file>Icons/Physics.Box.svg</file>
+        <file>Icons/PieChart.svg</file>
+        <file>Icons/Play.svg</file>
+        <file>Icons/Player.svg</file>
+        <file>Icons/Projects.svg</file>
+        <file>Icons/Radio.Off.svg</file>
+        <file>Icons/Radio.On.svg</file>
+        <file>Icons/Save.svg</file>
+        <file>Icons/Scene.svg</file>
+        <file>Icons/Search.svg</file>
+        <file>Icons/Settings.svg</file>
+        <file>Icons/Spot.svg</file>
+        <file>Icons/Stop.svg</file>
+        <file>Icons/Subtract.svg</file>
+        <file>Icons/Tag.svg</file>
+        <file>Icons/Time.svg</file>
+        <file>Icons/Timer.svg</file>
+        <file>Icons/Trainings.svg</file>
+        <file>Icons/Users.svg</file>
     </qresource>
 </RCC>

@@ -8,8 +8,12 @@ namespace tui {
 		: QMainWindow(parent)
 	{
 
-		new NavBar(this);
+		resize(600, 400);
 
+		auto tmp = new NavBar(this);
+
+
+		tmp->resize(100, 400);
 
 
 	}
