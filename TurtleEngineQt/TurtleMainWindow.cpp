@@ -1,10 +1,22 @@
 #include "TurtleMainWindow.h"
 
-TurtleMainWindow::TurtleMainWindow(QWidget *parent)
-    : QMainWindow(parent)
-{
-    ui.setupUi(this);
+#include "NavBar.h"
+
+namespace tui {
+
+	TurtleMainWindow::TurtleMainWindow(QWidget* parent)
+		: QMainWindow(parent)
+	{
+
+		new NavBar(this);
+
+
+
+	}
+
+	TurtleMainWindow::~TurtleMainWindow()
+	{
+	}
+
 }
 
-TurtleMainWindow::~TurtleMainWindow()
-{}

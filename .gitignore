@@ -12,6 +12,7 @@
 
 .vs/
 TurtleEngineQt/x64/
+x64/
 
 # Qt-es
 object_script.*.Release
