@@ -10,6 +10,9 @@
 *.dll
 *.dylib
 
+.vs/
+TurtleEngineQt/x64/
+
 # Qt-es
 object_script.*.Release
 object_script.*.Debug
