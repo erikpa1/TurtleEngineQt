@@ -2,10 +2,10 @@
 
 #include <qwidget.h>
 
-class QStackedLayout;
-class QVBoxLayout;
-class QPaintEvent;
 
+class QVBoxLayout;
+
+class QPaintEvent;
 
 namespace tui {
 
@@ -22,15 +22,18 @@ namespace tui {
 
 		bool _isMaximalized = true;
 
-		QVBoxLayout * _layout;
+		QVBoxLayout* _layout;
 
-		QStackedLayout * _stack;
-
-		void _AddNavBarButton(std::string lang, std::string icon);
+		void _AddNavBarButton(std::string lang, std::string icon, QFunctionPointer functPtr);
+		void _AddSeparator();
+		void _AddHeading();
 
 	protected:
 
 		void paintEvent(QPaintEvent* event) override;
+
+
+
 
 	};
 

@@ -25,6 +25,9 @@
     <Filter Include="Base">
       <UniqueIdentifier>{a24b98c8-17b6-41b1-b600-6421e73fb869}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ui\Lib">
+      <UniqueIdentifier>{d93566f8-b408-420d-bc3c-7a3b2c5be8ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TurtleMainWindow.cpp">
@@ -40,6 +43,9 @@
     <ClCompile Include="Router.cpp">
       <Filter>Routing</Filter>
     </ClCompile>
+    <ClCompile Include="CardView.cpp">
+      <Filter>Ui\Lib</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TurtleMainWindow.h">
@@ -48,6 +54,12 @@
     <QtMoc Include="NavBar.h">
       <Filter>Ui\NavBar</Filter>
     </QtMoc>
+    <QtMoc Include="ProjectsView.h">
+      <Filter>Ui\Routes\Projects</Filter>
+    </QtMoc>
+    <QtMoc Include="CardView.h">
+      <Filter>Ui\Lib</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="TurtleMainWindow.ui">
@@ -55,14 +67,14 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ProjectsView.h">
-      <Filter>Ui\Routes\Projects</Filter>
-    </ClInclude>
     <ClInclude Include="Router.h">
       <Filter>Routing</Filter>
     </ClInclude>
     <ClInclude Include="TMemory.h">
       <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Fonts.h">
+      <Filter>Ui\General</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -13,15 +13,15 @@
 
 using namespace tui;
 
-//int main(int argc, char* argv[])
-//{
-//	QApplication a(argc, argv);
-//	TurtleMainWindow w;
-//	w.show();
-//	return a.exec();
-//}
+int main(int argc, char* argv[])
+{
+	QApplication a(argc, argv);
+	TurtleMainWindow w;
+	w.show();
+	return a.exec();
+}
 
-int main(int argc, char* argv[]) {
+int main1(int argc, char* argv[]) {
     QApplication app(argc, argv);
 
     QWidget mainWindow;
@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
     leftWidget->setGraphicsEffect(shadowEffect);
 
     leftWidget->setStyleSheet("background-image: url(:Textures/Textures/AppBackgroundBlured.png);"
-        "background-color: #00597b;"
+        "background-color: #002330;"
         "background-repeat: no-repeat;"
         "background-position: bottom;");
 

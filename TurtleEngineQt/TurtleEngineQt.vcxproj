@@ -86,6 +86,7 @@
     <QtRcc Include="TurtleMainWindow.qrc" />
     <QtUic Include="TurtleMainWindow.ui" />
     <QtMoc Include="TurtleMainWindow.h" />
+    <ClCompile Include="CardView.cpp" />
     <ClCompile Include="NavBar.cpp" />
     <ClCompile Include="ProjectsView.cpp" />
     <ClCompile Include="Router.cpp" />
@@ -96,8 +97,10 @@
     <QtMoc Include="NavBar.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="CardView.h" />
+    <ClInclude Include="Fonts.h" />
     <ClInclude Include="TMemory.h" />
-    <ClInclude Include="ProjectsView.h" />
+    <QtMoc Include="ProjectsView.h" />
     <ClInclude Include="Router.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

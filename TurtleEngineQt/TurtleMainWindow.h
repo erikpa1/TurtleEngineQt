@@ -1,10 +1,15 @@
 #pragma once
 
-#include <QtWidgets/QMainWindow>
+#include <QWidget>
 #include "ui_TurtleMainWindow.h"
 
+
+
+class QHBoxLayout;
+class QWidget;
+
 namespace tui {
-	class TurtleMainWindow : public QMainWindow
+	class TurtleMainWindow : public QWidget
 	{
 		Q_OBJECT
 
@@ -14,6 +19,13 @@ namespace tui {
 
 	private:
 		Ui::TurtleMainWindowClass ui;
+
+		void _InitStyle();
+
+		QWidget* _FillNavbar(QHBoxLayout* layout);
+		QWidget* _InitProjectsView(QHBoxLayout* layout);
+
+
 	};
 
 }
