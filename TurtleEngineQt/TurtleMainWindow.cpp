@@ -1,6 +1,11 @@
+
+#include <QHBoxLayout>
+#include <qpushbutton.h>
+
 #include "TurtleMainWindow.h"
 
 #include "NavBar.h"
+
 
 namespace tui {
 
@@ -8,16 +13,22 @@ namespace tui {
 		: QMainWindow(parent)
 	{
 
-		resize(600, 400);
+		// Create a QVBoxLayout for the main window
+		QHBoxLayout* mainLayout = new QHBoxLayout;
 
-		auto tmp = new NavBar(this);
-
+		auto tmp = new NavBar();
 
 		tmp->resize(100, 400);
 
+		setLayout(mainLayout);
+
+		mainLayout->addWidget(tmp);
 
 
-		this->setStyleSheet("{background-image: url(:/Textures/Textures/UniversalTurtle.png);}");
+		resize(600, 400);
+
+
+
 
 
 	}

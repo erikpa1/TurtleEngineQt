@@ -41,10 +41,21 @@ namespace tui {
 		//_stack->addItem(_layout);
 
 
-		_layout = new QVBoxLayout();
-		_layout->setSpacing(0);
 
-		this->setLayout(_layout);
+		this->setStyleSheet("background-image: url(:Textures/Textures/AppBackgroundBlured.png);"
+			"background-repeat: no-repeat;"
+			"background-position: center;");
+
+
+		QWidget* buttonContainer = new QWidget(this);
+
+
+
+		buttonContainer->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::MinimumExpanding);
+		buttonContainer->setStyleSheet("background-color: lightgray;");
+
+		_layout = new QVBoxLayout(buttonContainer);
+
 
 		_AddNavBarButton("projects", "Projects.svg");
 		_AddNavBarButton("deployment", "Bell.svg");
@@ -57,6 +68,10 @@ namespace tui {
 		_AddNavBarButton("assets", "Assets.svg");
 
 
+
+
+
+
 	}
 
 	NavBar::~NavBar()
@@ -66,13 +81,19 @@ namespace tui {
 
 	void NavBar::_AddNavBarButton(std::string lang, std::string icon)
 	{
-		auto qIcon = new QIcon(QString::fromStdString(":/Icons/Icons/" + icon));
+		QIcon qIcon(QString::fromStdString(":/Icons/Icons/" + icon));
+	
 
 		auto btn = new QPushButton();
-		btn->setIcon(*qIcon);
+		btn->setIcon(qIcon);
+		btn->setIconSize(QSize(32, 32));
+		btn->setStyleSheet("font-color: white;");
 		btn->setText(QString::fromStdString(lang));
-		btn->resize(100, 100);
-		//btn->setStyleSheet("background: transparent; border: none;");
+
+		btn->setStyleSheet("background: transparent; border: none;"
+			"text-align: left;"
+			"color: white;"
+		);
 
 		_layout->addWidget(btn);
 	}
