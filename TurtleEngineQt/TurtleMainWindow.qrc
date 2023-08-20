@@ -1,5 +1,4 @@
 <RCC>
-    <qresource prefix="/TurtleMainWindow"/>
     <qresource prefix="/Icons">
         <file>Icons/Add.svg</file>
         <file>Icons/Alarm.svg</file>
@@ -62,5 +61,9 @@
         <file>Icons/Timer.svg</file>
         <file>Icons/Trainings.svg</file>
         <file>Icons/Users.svg</file>
+    </qresource>
+    <qresource prefix="/Textures">
+        <file>Textures/AppBackgroundBlured.png</file>
+        <file>Textures/UniversalTurtle.png</file>
     </qresource>
 </RCC>

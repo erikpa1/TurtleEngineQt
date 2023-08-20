@@ -22,6 +22,9 @@
     <Filter Include="Routing">
       <UniqueIdentifier>{5ad9d2c6-7112-483e-940b-aede35536d61}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{a24b98c8-17b6-41b1-b600-6421e73fb869}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TurtleMainWindow.cpp">
@@ -57,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="Router.h">
       <Filter>Routing</Filter>
+    </ClInclude>
+    <ClInclude Include="TMemory.h">
+      <Filter>Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

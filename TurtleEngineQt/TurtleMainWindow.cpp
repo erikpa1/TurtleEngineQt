@@ -16,6 +16,10 @@ namespace tui {
 		tmp->resize(100, 400);
 
 
+
+		this->setStyleSheet("{background-image: url(:/Textures/Textures/UniversalTurtle.png);}");
+
+
 	}
 
 	TurtleMainWindow::~TurtleMainWindow()

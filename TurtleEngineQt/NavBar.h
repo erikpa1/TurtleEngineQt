@@ -1,9 +1,8 @@
 #pragma once
 
-#include <QtWidgets/qwidget.h>
+#include <qwidget.h>
 
-
-
+class QStackedLayout;
 class QVBoxLayout;
 class QPaintEvent;
 
@@ -23,9 +22,9 @@ namespace tui {
 
 		bool _isMaximalized = true;
 
-		QVBoxLayout* _layout;
+		QVBoxLayout * _layout;
 
-
+		QStackedLayout * _stack;
 
 		void _AddNavBarButton(std::string lang, std::string icon);
 

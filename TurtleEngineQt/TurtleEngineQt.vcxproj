@@ -96,6 +96,7 @@
     <QtMoc Include="NavBar.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="TMemory.h" />
     <ClInclude Include="ProjectsView.h" />
     <ClInclude Include="Router.h" />
   </ItemGroup>
