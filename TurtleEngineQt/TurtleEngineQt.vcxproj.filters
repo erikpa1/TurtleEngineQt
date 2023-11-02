@@ -46,6 +46,10 @@
     <ClCompile Include="CardView.cpp">
       <Filter>Ui\Lib</Filter>
     </ClCompile>
+    <ClCompile Include="main_sandbox.cpp" />
+    <ClCompile Include="AppRouterManager.cpp">
+      <Filter>Ui\Routes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TurtleMainWindow.h">
@@ -75,6 +79,9 @@
     </ClInclude>
     <ClInclude Include="Fonts.h">
       <Filter>Ui\General</Filter>
+    </ClInclude>
+    <ClInclude Include="AppRouterManager.h">
+      <Filter>Ui\Routes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

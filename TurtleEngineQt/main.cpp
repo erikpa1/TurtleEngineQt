@@ -11,6 +11,9 @@
 #include <QGraphicsDropShadowEffect>
 
 
+#include "AppRouterManager.h"
+
+
 using namespace tui;
 
 int main(int argc, char* argv[])
@@ -22,65 +25,75 @@ int main(int argc, char* argv[])
 }
 
 int main1(int argc, char* argv[]) {
-    QApplication app(argc, argv);
+	QApplication app(argc, argv);
 
-    QWidget mainWindow;
-    mainWindow.resize(800, 600);
-
-
-    mainWindow.setStyleSheet("background-color: #dae0e6;");
-
-    // Create a QVBoxLayout for the main window
-    QHBoxLayout* mainLayout = new QHBoxLayout;
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+	QWidget mainWindow;
+	mainWindow.resize(800, 600);
 
 
-    // Create a widget to be scaled
-    QPushButton* scalingButton = new QPushButton("Scaling Button");
-    scalingButton->setStyleSheet("background-color: red;");
-    QPushButton* scalingButton1 = new QPushButton("Scaling Button");
-    scalingButton1->setStyleSheet("background-color: red;");
-    QPushButton* scalingButton2 = new QPushButton("Scaling Button");
-    scalingButton2->setStyleSheet("background-color: white;");
+	mainWindow.setStyleSheet("background-color: #dae0e6;");
 
-    auto leftWidget = new QWidget();
-    leftWidget->setFixedWidth(100);
-    leftWidget->setContentsMargins(0, 0, 0, 0);
-
-    
-    auto vbox = new QVBoxLayout();
-    vbox->setSpacing(10);
-    vbox->addWidget(scalingButton1);
-    vbox->addWidget(scalingButton2);
+	// Create a QVBoxLayout for the main window
+	QHBoxLayout* mainLayout = new QHBoxLayout;
+	mainLayout->setContentsMargins(0, 0, 0, 0);
 
 
+	// Create a widget to be scaled
+	QPushButton* scalingButton = new QPushButton("Scaling Button");
+	scalingButton->setStyleSheet("background-color: red;");
+	QPushButton* scalingButton1 = new QPushButton("Scaling Button");
+	scalingButton1->setStyleSheet("background-color: red;");
+	QPushButton* scalingButton2 = new QPushButton("Scaling Button");
+	scalingButton2->setStyleSheet("background-color: white;");
 
-    leftWidget->setLayout(vbox);
+	auto leftWidget = new QWidget();
+	leftWidget->setFixedWidth(100);
+	leftWidget->setContentsMargins(0, 0, 0, 0);
 
 
-    QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
-    shadowEffect->setOffset(1, 0); // Set the shadow offset (rightwards)
-    shadowEffect->setColor(Qt::black); // Set the shadow color
-    shadowEffect->setBlurRadius(30); // Set the shadow blur radius
-
-    // Apply the shadow effect to the QLabel
-    leftWidget->setGraphicsEffect(shadowEffect);
-
-    leftWidget->setStyleSheet("background-image: url(:Textures/Textures/AppBackgroundBlured.png);"
-        "background-color: #002330;"
-        "background-repeat: no-repeat;"
-        "background-position: bottom;");
+	auto vbox = new QVBoxLayout();
+	vbox->setSpacing(10);
+	vbox->addWidget(scalingButton1);
+	vbox->addWidget(scalingButton2);
 
 
 
-    // Add the scaled widget to the layout
-    mainLayout->addWidget(leftWidget);
-    mainLayout->addWidget(scalingButton1);
+	leftWidget->setLayout(vbox);
 
-    // Set the layout as the main layout for the main window
-    mainWindow.setLayout(mainLayout);
 
-    mainWindow.show();
+	QGraphicsDropShadowEffect* shadowEffect = new QGraphicsDropShadowEffect;
+	shadowEffect->setOffset(1, 0); // Set the shadow offset (rightwards)
+	shadowEffect->setColor(Qt::black); // Set the shadow color
+	shadowEffect->setBlurRadius(30); // Set the shadow blur radius
 
-    return app.exec();
+	// Apply the shadow effect to the QLabel
+	leftWidget->setGraphicsEffect(shadowEffect);
+
+	leftWidget->setStyleSheet("background-image: url(:Textures/Textures/AppBackgroundBlured.png);"
+		"background-color: #002330;"
+		"background-repeat: no-repeat;"
+		"background-position: bottom;");
+
+
+	// Add the scaled widget to the layout
+	mainLayout->addWidget(leftWidget);
+	mainLayout->addWidget(scalingButton1);
+
+	// Set the layout as the main layout for the main window
+	mainWindow.setLayout(mainLayout);
+
+
+	AppRouterManager::onRouteChanged("Dada");
+
+	AppRouterManager::onRouteChanged = [](const std::string& str) {
+		qDebug() << "Route changed: " + str;
+		};
+
+	AppRouterManager::fnPointer = []() {
+		qDebug() << "Route changed: ";
+		};
+
+	mainWindow.show();
+
+	return app.exec();
 }

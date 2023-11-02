@@ -14,6 +14,7 @@
 
 #include <qdebug.h>
 
+#include "AppRouterManager.h"
 
 namespace tui {
 
@@ -27,11 +28,11 @@ namespace tui {
 		_layout = new QVBoxLayout(buttonContainer);
 		_layout->setSpacing(25);
 
-
 		_AddHeading();
 
 		_AddNavBarButton("Projects", "Projects.svg", []() {
 			qDebug() << "Projects clicked";
+			AppRouterManager::fnPointer();
 			});
 
 		_AddNavBarButton("Deployment", "Bell.svg", []() {
@@ -94,6 +95,8 @@ namespace tui {
 
 		_layout->addLayout(elementsBox);
 	}
+
+
 
 	void NavBar::_AddSeparator()
 	{

@@ -10,6 +10,8 @@
 *.dll
 *.dylib
 
+.idea/
+
 .vs/
 TurtleEngineQt/x64/
 x64/

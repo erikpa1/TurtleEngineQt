@@ -61,6 +61,10 @@ namespace tui {
 
 		auto contentLabel = new QLabel("Card Content");
 		auto  actionButton = new QPushButton("Action");
+		actionButton->setStyleSheet("background-color: #0b5ed7;"
+		"color: white;"
+		"border-radius: 5px;"
+		);
 
 		cardLayout->addLayout(contentLayout);
 		contentLayout->addWidget(titleLabel);

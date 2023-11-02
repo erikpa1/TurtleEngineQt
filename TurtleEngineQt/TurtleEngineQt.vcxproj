@@ -87,9 +87,11 @@
     <QtUic Include="TurtleMainWindow.ui" />
     <QtMoc Include="TurtleMainWindow.h" />
     <ClCompile Include="CardView.cpp" />
+    <ClCompile Include="main_sandbox.cpp" />
     <ClCompile Include="NavBar.cpp" />
     <ClCompile Include="ProjectsView.cpp" />
     <ClCompile Include="Router.cpp" />
+    <ClCompile Include="AppRouterManager.cpp" />
     <ClCompile Include="TurtleMainWindow.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -98,6 +100,7 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="CardView.h" />
+    <ClInclude Include="AppRouterManager.h" />
     <ClInclude Include="Fonts.h" />
     <ClInclude Include="TMemory.h" />
     <QtMoc Include="ProjectsView.h" />
