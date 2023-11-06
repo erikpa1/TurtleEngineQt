@@ -31,16 +31,15 @@ namespace tui {
 		_AddHeading();
 
 		_AddNavBarButton("Projects", "Projects.svg", []() {
-			qDebug() << "Projects clicked";
-			AppRouterManager::fnPointer();
+			AppRouterManager::onRouteChanged("/projects");
 			});
 
 		_AddNavBarButton("Deployment", "Bell.svg", []() {
-			qDebug() << "Deployment clicked";
+			AppRouterManager::onRouteChanged("/deployment");
 			});
 
 		_AddNavBarButton("Assets", "Assets.svg", []() {
-			qDebug() << "Assets clicked";
+			AppRouterManager::onRouteChanged("/assets");
 			});
 
 		_AddSeparator();

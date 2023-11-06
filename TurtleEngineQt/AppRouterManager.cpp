@@ -4,6 +4,6 @@ namespace tui {
 
 	std::function<void(const std::string&)> AppRouterManager::onRouteChanged = nullptr;
 
-	QFunctionPointer AppRouterManager::fnPointer = nullptr;
+
 
 }

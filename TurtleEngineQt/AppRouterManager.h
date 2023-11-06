@@ -14,7 +14,6 @@ namespace tui {
 
 		static std::function<void(const std::string&)> onRouteChanged;
 
-		static QFunctionPointer fnPointer;
 
 	};
 

@@ -5,6 +5,8 @@
 
 #include <QLabel>
 
+
+
 #include "TurtleMainWindow.h"
 #include "ProjectsView.h"
 #include "NavBar.h"
@@ -22,14 +24,12 @@ namespace tui {
 		_InitStyle();
 
 
-
 		QHBoxLayout* mainLayout = new QHBoxLayout(this);
 		mainLayout->setContentsMargins(0, 0, 0, 0);
+		_rootLayout = mainLayout;
 
 		auto navBar = _FillNavbar(mainLayout);
-		auto content = _InitProjectsView(mainLayout);
-
-		content->stackUnder(navBar);
+		_navBarWidget = navBar;
 
 		//QPushButton* scalingButton1 = new QPushButton("Scaling Button");
 		//scalingButton1->setStyleSheet("background-color: red;");
@@ -44,13 +44,34 @@ namespace tui {
 
 	}
 
+	void TurtleMainWindow::RouteChanged(const std::string& newRoute)
+	{
+		qDebug() << "New route" + newRoute;
+
+
+		if (_activeContentElement) {
+			_rootLayout->removeWidget(_activeContentElement);
+		}
+
+		if (newRoute == "/projects") {
+
+			_InitProjectsView();
+		}
+
+		if (_activeContentElement) {
+			_activeContentElement->stackUnder(_navBarWidget);
+		}
+
+
+	}
+
 	void TurtleMainWindow::_InitStyle()
 	{
 		setStyleSheet("background-color: #dae0e6;");
 		resize(800, 600);
 	}
 
-	QWidget* TurtleMainWindow::_FillNavbar(QHBoxLayout* layout)
+	QWidget* TurtleMainWindow::_FillNavbar(QLayout* layout)
 	{
 
 		auto leftWidget = new QWidget();
@@ -87,13 +108,11 @@ namespace tui {
 
 
 
-	QWidget* TurtleMainWindow::_InitProjectsView(QHBoxLayout* layout)
+	QWidget* TurtleMainWindow::_InitProjectsView()
 	{
 		auto projectsView = new ProjectsView();
-
-
-		layout->addWidget(projectsView);
-
+		_rootLayout->addWidget(projectsView);
+		_activeContentElement = projectsView;
 		return projectsView;
 
 	}
