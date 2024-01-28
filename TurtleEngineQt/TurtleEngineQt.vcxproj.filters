@@ -50,6 +50,7 @@
     <ClCompile Include="AppRouterManager.cpp">
       <Filter>Ui\Routes</Filter>
     </ClCompile>
+    <ClCompile Include="Canvas3d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="TurtleMainWindow.h">
@@ -83,6 +84,7 @@
     <ClInclude Include="AppRouterManager.h">
       <Filter>Ui\Routes</Filter>
     </ClInclude>
+    <ClInclude Include="Canvas3d.h" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="TurtleMainWindow.qrc" />
